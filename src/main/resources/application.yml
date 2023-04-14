@@ -1,0 +1,29 @@
+logging:
+  level:
+    root: debug
+
+server:
+  port: 8085
+encrypt.key: neolider998968
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          #uri: git@github.com:neolider/config-repo.git
+          uri: https://github.com/cuantaTestCloud/swf-config-repo.git
+          ignore-local-ssh-settings: true
+          #passphrase: neolider
+          #private-key: |
+            #-----BEGIN OPENSSH PRIVATE KEY-----
+            #b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABC4lm5ijh
+            #31xaBRwFnyQ6FgAAAAEAAAAAEAAAAzAAAAC3NzaC1lZDI1NTE5AAAAIFOhWDX+pFVSyWsl
+            #dlCeWMq1uaU1kqSZQCrz9EgQK1LCAAAAoBDlBqeGeMumfW+byJPxvXGOi87hFvkb46DkrC
+            #kGdCWu7aWdfxJQYp+K8wHKgUPXq+upy11Fci0Ykn0TFugIkPYX+eMVezWVhpo6SVIFUBnj
+            #qnpRnItF+G0mHZ2vLzpTL2Mc6S9jYw+9hN1METdTdTD1YQ8X041JfMqT5KnUUPo/vd7w1x
+            #vHiqP+bTJVV6fmHbKQ42h94f6tvLrUr6ajgOQ=
+          #-----END OPENSSH PRIVATE KEY-----
+          #search-paths: configuration
+          defaultLabel: main
+          #label: main
+          #cloneOnStart: true
